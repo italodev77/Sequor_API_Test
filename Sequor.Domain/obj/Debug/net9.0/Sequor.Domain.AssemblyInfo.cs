@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sequor.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1a8cad338455ce4893cb091c7e179c9287371e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0798253f1460d042288ada0b8ea6c52e063bb46")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sequor.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sequor.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
