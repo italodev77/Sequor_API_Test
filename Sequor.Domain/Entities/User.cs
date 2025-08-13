@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sequor.Domain.Entities
 {
-    internal class User
+    public class User
     {
+        public string Email { get; set; } = null!;
+        public string Name { get; set; } = null!;
+        public DateTime InitialDate { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }

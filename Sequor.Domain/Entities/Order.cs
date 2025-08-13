@@ -8,7 +8,7 @@ namespace Sequor.Domain.Entities
 {
     public class Order
     {
-        public string OrderId { get; set; } = null!; // "Order" in PDF
+        public string OrderId { get; set; } = null!;
         public decimal Quantity { get; set; }
         public string ProductCode { get; set; } = null!;
         public Product Product { get; set; } = null!;
