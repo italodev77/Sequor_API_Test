@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "Sequor.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Sequor.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sequor.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Sequor.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Sequor.Domain/Sequor.Domain.csproj",
+      "msbuildProject": "../Sequor.Domain/Sequor.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Sequor.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\italo\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Domain.csproj": {
+              "projectPath": "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
