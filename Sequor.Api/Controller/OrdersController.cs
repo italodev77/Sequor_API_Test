@@ -36,12 +36,14 @@ namespace Sequor.Api.Controller
         /// Retorna produções filtradas por e-mail.
         /// </summary>
         [HttpGet("GetProduction")]
-        public async Task<ActionResult<GetProductionResponseDTO>> GetProduction([FromQuery] string email)
+        public async Task<ActionResult<IEnumerable<GetProductionResponseDTO>>> GetProduction([FromQuery] string email)
         {
             if (string.IsNullOrWhiteSpace(email))
                 return BadRequest(new { message = "Email é obrigatório" });
 
             var result = await _getProductionByEmailService.Execute(email);
+
+            // Sempre retorna lista (mesmo vazia)
             return Ok(result);
         }
 
