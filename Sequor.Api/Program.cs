@@ -1,57 +1,49 @@
+using Microsoft.EntityFrameworkCore;
 using Sequor.Application.IRepositories;
 using Sequor.Application.IService;
+using Sequor.Application.Mapping;
 using Sequor.Application.ServiceImp;
+using Sequor.Infrastructure.Data;
 using Sequor.Infrastructure.RepositoryImp;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddDbContext<SequorDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-var app = builder.Build();
-//Services
-builder.Services.AddAutoMapper(typeof(Sequor.Application.Mapping.MappingProfile));
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
 builder.Services.AddScoped<IGetOrdersService, GetOrdersServiceImp>();
 builder.Services.AddScoped<IGetProductionByEmailService, GetProductionByEmailService>();
 builder.Services.AddScoped<ISetProductionService, SetProductionServiceImp>();
 
-// Repositórios
 builder.Services.AddScoped<IOrderRepository, OrderRepositoryImp>();
 builder.Services.AddScoped<IProductionRepository, ProductionRepositoryImp>();
 builder.Services.AddScoped<IUserRepository, UserRepositoryImp>();
 
+builder.Services.AddOpenApi();
 
-// Configure the HTTP request pipeline.
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<SequorDbContext>();
+
+    // Garante que o banco existe e está atualizado
+    dbContext.Database.Migrate();
+
+    // Popula o banco com dados iniciais
+    DataSeeder.Seed(dbContext);
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
 app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+app.MapControllers();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sequor.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f0878859e17d1e62b8f2e93ad6efae5a8bc1ebf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a70205d8c134530b2f07679aa98297db1c90dbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sequor.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sequor.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
