@@ -42,8 +42,9 @@ namespace Sequor.Infrastructure.Data
 
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.Product)
-                .WithMany()
-                .HasForeignKey(o => o.ProductCode);
+                .WithMany(p => p.Orders) 
+                .HasForeignKey(o => o.ProductCode)
+                .HasPrincipalKey(p => p.ProductCode);
         }
     }
 }
