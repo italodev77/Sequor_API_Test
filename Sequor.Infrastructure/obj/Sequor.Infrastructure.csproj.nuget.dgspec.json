@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Domain.csproj": {
                 "projectPath": "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Domain.csproj"
+              },
+              "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Infrastructure.csproj": {
+                "projectPath": "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Infrastructure.csproj"
               }
             }
           }

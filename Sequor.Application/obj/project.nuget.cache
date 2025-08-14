@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "ViBZEwqVWAc=",
-  "success": true,
+  "dgSpecHash": "LMGugK+3P3g=",
+  "success": false,
   "projectFilePath": "C:\\sequorTesteApi\\Sequor.Application\\Sequor.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\italo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
@@ -12,5 +12,17 @@
     "C:\\Users\\italo\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\italo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Infrastructure.csproj'. Check that the project reference is valid and that the project file exists.",
+      "projectPath": "C:\\sequorTesteApi\\Sequor.Application\\Sequor.Application.csproj",
+      "filePath": "C:\\sequorTesteApi\\Sequor.Application\\Sequor.Application.csproj",
+      "libraryId": "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Infrastructure.csproj",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

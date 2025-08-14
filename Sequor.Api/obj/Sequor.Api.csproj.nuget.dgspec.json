@@ -61,6 +61,12 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.*, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[9.0.3, )"
@@ -119,6 +125,9 @@
             "projectReferences": {
               "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Domain.csproj": {
                 "projectPath": "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Domain.csproj"
+              },
+              "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Infrastructure.csproj": {
+                "projectPath": "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Infrastructure.csproj"
               }
             }
           }
