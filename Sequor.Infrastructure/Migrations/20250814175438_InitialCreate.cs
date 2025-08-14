@@ -57,8 +57,7 @@ namespace Sequor.Infrastructure.Migrations
                 {
                     OrderId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Quantity = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    ProductCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    ProductCode1 = table.Column<string>(type: "nvarchar(50)", nullable: true)
+                    ProductCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -69,11 +68,6 @@ namespace Sequor.Infrastructure.Migrations
                         principalTable: "products",
                         principalColumn: "ProductCode",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_order_products_ProductCode1",
-                        column: x => x.ProductCode1,
-                        principalTable: "products",
-                        principalColumn: "ProductCode");
                 });
 
             migrationBuilder.CreateTable(
@@ -134,11 +128,6 @@ namespace Sequor.Infrastructure.Migrations
                 name: "IX_order_ProductCode",
                 table: "order",
                 column: "ProductCode");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_order_ProductCode1",
-                table: "order",
-                column: "ProductCode1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_product_materials_MaterialCode",

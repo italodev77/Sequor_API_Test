@@ -49,17 +49,12 @@ namespace Sequor.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("ProductCode1")
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<decimal>("Quantity")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("OrderId");
 
                     b.HasIndex("ProductCode");
-
-                    b.HasIndex("ProductCode1");
 
                     b.ToTable("order");
                 });
@@ -172,14 +167,10 @@ namespace Sequor.Infrastructure.Migrations
             modelBuilder.Entity("Sequor.Domain.Entities.Order", b =>
                 {
                     b.HasOne("Sequor.Domain.Entities.Product", "Product")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("ProductCode")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Sequor.Domain.Entities.Product", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("ProductCode1");
 
                     b.Navigation("Product");
                 });

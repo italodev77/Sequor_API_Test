@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SetProductionResponseFactory = Sequor.Application.ProductionFactory.SetProductionResponseFactory;
 
 namespace Sequor.Application.ServiceImp
 {
@@ -35,6 +36,7 @@ namespace Sequor.Application.ServiceImp
         public async Task<SetProductionResponseDTO> SetProductionAsync(SetProductionRequestDTO request)
         {
             var validationResult = await _validator.ValidateAsync(request);
+
             if (!validationResult.IsValid)
                 return SetProductionResponseFactory.Error(validationResult.ErrorMessage);
 

@@ -26,16 +26,21 @@ namespace Sequor.Application.ServiceImp
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<GetProductionResponseDTO>> Execute(string email)
+        public async Task<GetProductionResponseDTO> Execute(string email)
         {
             var productions = await _productionRepository.GetByEmailAsync(email);
 
-            // Garante que sempre retorna lista, nunca null
-            if (productions == null || !productions.Any())
-                return new List<GetProductionResponseDTO>();
+            var response = new GetProductionResponseDTO
+            {
+                Productions = _mapper.Map<IEnumerable<ProductionItemDTO>>(productions)
+            };
 
-            return _mapper.Map<IEnumerable<GetProductionResponseDTO>>(productions);
+            return response;
         }
-
+        
     }
+
+
+
+    
 }

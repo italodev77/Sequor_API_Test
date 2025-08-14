@@ -9,6 +9,6 @@ namespace Sequor.Application.IService
 {
     public interface IGetProductionByEmailService
     {
-        Task<IEnumerable<GetProductionResponseDTO>> Execute(string email);
+        Task<GetProductionResponseDTO> Execute(string email);
     }
 }

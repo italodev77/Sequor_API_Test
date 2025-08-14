@@ -1,7 +1,6 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Sequor.Application.IRepositories;
 using Sequor.Application.IService;
-using Sequor.Application.Mapping;
 using Sequor.Application.ServiceImp;
 using Sequor.Infrastructure.Data;
 using Sequor.Infrastructure.RepositoryImp;
@@ -10,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<SequorDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
@@ -21,26 +21,39 @@ builder.Services.AddScoped<IOrderRepository, OrderRepositoryImp>();
 builder.Services.AddScoped<IProductionRepository, ProductionRepositoryImp>();
 builder.Services.AddScoped<IUserRepository, UserRepositoryImp>();
 
-builder.Services.AddOpenApi();
+
+builder.Services.AddSwaggerGen();
+
 
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
+//Aplicar migrações e seed de dados
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<SequorDbContext>();
+    try
+    {
+        Console.WriteLine("Aplicando migrações...");
+        dbContext.Database.Migrate();
+        Console.WriteLine("Migrações aplicadas.");
 
-    // Garante que o banco existe e est� atualizado
-    dbContext.Database.Migrate();
-
-    // Popula o banco com dados iniciais
-    DataSeeder.Seed(dbContext);
+        Console.WriteLine("Executando seed de dados...");
+        DataSeeder.Seed(dbContext);
+        Console.WriteLine("Seed concluído.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Erro ao aplicar migração ou seed: {ex.Message}");
+        throw;
+    }
 }
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
