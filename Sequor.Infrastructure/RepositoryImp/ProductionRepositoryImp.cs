@@ -14,7 +14,7 @@ namespace Sequor.Infrastructure.RepositoryImp
     {
         private readonly SequorDbContext _context;
 
-        public ProductionRepository(SequorDbContext context)
+        public ProductionRepositoryImp(SequorDbContext context)
         {
             _context = context;
         }

@@ -1,0 +1,16 @@
+C:\sequorTesteApi\Sequor.Application\bin\Debug\net9.0\Sequor.Application.deps.json
+C:\sequorTesteApi\Sequor.Application\bin\Debug\net9.0\Sequor.Application.dll
+C:\sequorTesteApi\Sequor.Application\bin\Debug\net9.0\Sequor.Application.pdb
+C:\sequorTesteApi\Sequor.Application\bin\Debug\net9.0\Sequor.Domain.dll
+C:\sequorTesteApi\Sequor.Application\bin\Debug\net9.0\Sequor.Domain.pdb
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\Sequor.Application.csproj.AssemblyReference.cache
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\Sequor.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\Sequor.Application.AssemblyInfoInputs.cache
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\Sequor.Application.AssemblyInfo.cs
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\Sequor.Application.csproj.CoreCompileInputs.cache
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\Sequor.Application.sourcelink.json
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\Sequor.A.4DB66812.Up2Date
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\Sequor.Application.dll
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\refint\Sequor.Application.dll
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\Sequor.Application.pdb
+C:\sequorTesteApi\Sequor.Application\obj\Debug\net9.0\ref\Sequor.Application.dll

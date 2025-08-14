@@ -1,0 +1,6 @@
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.csproj.AssemblyReference.cache
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.AssemblyInfoInputs.cache
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.AssemblyInfo.cs
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.csproj.CoreCompileInputs.cache
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.sourcelink.json
