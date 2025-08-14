@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sequor.Infrastructure.IRepositories
+namespace Sequor.Application.IRepositories
 {
     public interface IProductionRepository
     {

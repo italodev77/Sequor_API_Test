@@ -1,3 +1,6 @@
+using Sequor.Application.IRepositories;
+using Sequor.Infrastructure.RepositoryImp;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+builder.Services.AddAutoMapper(typeof(Sequor.Application.Mapping.MappingProfile));
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -1,6 +1,6 @@
-﻿using Sequor.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Sequor.Domain.Entities;
 using Sequor.Infrastructure.Data;
-using Sequor.Infrastructure.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

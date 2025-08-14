@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sequor.Application.DTOs
 {
-    public class OrderDto
+    public class OrderDTO
     {
         public string Order { get; set; } = null!;
         public decimal Quantity { get; set; }
@@ -14,6 +14,6 @@ namespace Sequor.Application.DTOs
         public string ProductDescription { get; set; } = null!;
         public string? Image { get; set; }
         public decimal CycleTime { get; set; }
-        public IEnumerable<MaterialDto> Materials { get; set; } = new List<MaterialDto>();
+        public IEnumerable<MaterialDTO> Materials { get; set; } = new List<MaterialDto>();
     }
 }

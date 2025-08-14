@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sequor.Application.DTOs
 {
-    public class ProductionItemDto
+    public class ProductionItemDTO
     {
         public string Order { get; set; } = null!;
         public DateTime Date { get; set; }
