@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Sequor.Application.IRepositories;
 using Sequor.Domain.Entities;
 using Sequor.Infrastructure.Data;
 using System;
@@ -9,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Sequor.Infrastructure.RepositoryImp
 {
-    public class OrderRepository : IOrderRepository
+    public class OrderRepositoryImp : IOrderRepository
     {
         private readonly SequorDbContext _context;
 
-        public OrderRepository(SequorDbContext context)
+        public OrderRepositoryImp(SequorDbContext context)
         {
             _context = context;
         }

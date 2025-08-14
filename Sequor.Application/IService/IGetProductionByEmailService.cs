@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sequor.Application.IService
 {
-    internal interface IGetProductionByEmailService
+    public interface IGetProductionByEmailService
     {
         Task<GetProductionResponseDTO> Execute(string email);
     }

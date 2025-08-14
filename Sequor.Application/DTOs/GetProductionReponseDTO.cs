@@ -8,7 +8,7 @@ namespace Sequor.Application.DTOs
 {
     public class GetProductionResponseDTO
     {
-        public IEnumerable<ProductionItemDto> Productions { get; set; } = new List<ProductionItemDto>();
+        public IEnumerable<ProductionItemDTO> Productions { get; set; } = new List<ProductionItemDTO>();
     }
 
 }

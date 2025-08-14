@@ -14,6 +14,6 @@ namespace Sequor.Application.DTOs
         public string ProductDescription { get; set; } = null!;
         public string? Image { get; set; }
         public decimal CycleTime { get; set; }
-        public IEnumerable<MaterialDTO> Materials { get; set; } = new List<MaterialDto>();
+        public IEnumerable<MaterialDTO> Materials { get; set; } = new List<MaterialDTO>();
     }
 }

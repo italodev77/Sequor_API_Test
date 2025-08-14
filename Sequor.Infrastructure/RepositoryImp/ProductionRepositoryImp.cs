@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Sequor.Infrastructure.RepositoryImp
 {
-    public class ProductionRepository : IProductionRepository
+    public class ProductionRepositoryImp : IProductionRepository
     {
         private readonly SequorDbContext _context;
 

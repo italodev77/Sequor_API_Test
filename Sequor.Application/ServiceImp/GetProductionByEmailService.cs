@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Sequor.Application.ServiceImp
 {
-    internal class GetProductionByEmailService: IGetProductionByEmailService
+    public class GetProductionByEmailService: IGetProductionByEmailService
     {
         private readonly IProductionRepository _productionRepository;
         private readonly IOrderRepository _orderRepository;

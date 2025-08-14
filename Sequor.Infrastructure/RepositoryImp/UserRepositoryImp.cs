@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Sequor.Infrastructure.RepositoryImp
 {
-    public class UserRepository : IUserRepository
+    public class UserRepositoryImp : IUserRepository
     {
         private readonly SequorDbContext _context;
 
-        public UserRepository(SequorDbContext context)
+        public UserRepositoryImp(SequorDbContext context)
         {
             _context = context;
         }

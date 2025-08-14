@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sequor.Application.IService
 {
-    internal interface ISetProductionService
+    public interface ISetProductionService
     {
         Task<SetProductionResponseDTO> SetProductionAsync(SetProductionRequestDTO request);
     }

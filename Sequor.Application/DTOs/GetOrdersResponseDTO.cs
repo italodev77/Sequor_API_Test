@@ -8,6 +8,6 @@ namespace Sequor.Application.DTOs
 {
     public class GetOrdersResponseDTO
     {
-        public IEnumerable<OrderDto> Orders { get; set; } = new List<OrderDto>();
+        public IEnumerable<OrderDTO> Orders { get; set; } = new List<OrderDTO>();
     }
 }

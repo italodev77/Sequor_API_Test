@@ -1,4 +1,6 @@
 using Sequor.Application.IRepositories;
+using Sequor.Application.IService;
+using Sequor.Application.ServiceImp;
 using Sequor.Infrastructure.RepositoryImp;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +10,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+//Services
 builder.Services.AddAutoMapper(typeof(Sequor.Application.Mapping.MappingProfile));
-builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IGetOrdersService, GetOrdersServiceImp>();
+builder.Services.AddScoped<IGetProductionByEmailService, GetProductionByEmailService>();
+builder.Services.AddScoped<ISetProductionService, SetProductionServiceImp>();
+
+// Repositórios
+builder.Services.AddScoped<IOrderRepository, OrderRepositoryImp>();
+builder.Services.AddScoped<IProductionRepository, ProductionRepositoryImp>();
+builder.Services.AddScoped<IUserRepository, UserRepositoryImp>();
 
 
 // Configure the HTTP request pipeline.
