@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sequor.Domain\Sequor.Domain.csproj" />
-    <ProjectReference Include="..\Sequor.Domain\Sequor.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

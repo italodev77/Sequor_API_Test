@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sequor.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1661e9d815b704175eb77e3441a8dbaeae989151")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14cf28fecfbe3f42d1a1d2d794d5c8d763537878")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sequor.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sequor.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

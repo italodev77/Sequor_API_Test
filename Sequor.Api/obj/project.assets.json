@@ -1627,7 +1627,6 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Infrastructure.csproj": "1.0.0",
           "Sequor.Domain": "1.0.0"
         },
         "compile": {
@@ -4644,16 +4643,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Infrastructure.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\sequorTesteApi\\Sequor.Domain\\Sequor.Infrastructure.csproj",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }

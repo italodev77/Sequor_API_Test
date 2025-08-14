@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sequor.Domain.Entities
 {
-    [Table("TB_productMaterials")]
+    [Table("product_materials")]
     public class ProductMaterial
     {
         [Key, Column(Order = 0)]

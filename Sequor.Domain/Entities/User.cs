@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sequor.Domain.Entities
 {
-    [Table("TB_users")]
+    [Table("users")]
     public class User
     {
         [Key]

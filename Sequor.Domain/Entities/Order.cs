@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sequor.Domain.Entities
 {
-    [Table("TB_orders")]
+    [Table("order")]
     public class Order
     {
         [Key]
@@ -19,9 +19,9 @@ namespace Sequor.Domain.Entities
         public decimal Quantity { get; set; }
 
         [MaxLength(50)]
+        [ForeignKey(nameof(Product))]
         public string ProductCode { get; set; } = null!;
 
-        [ForeignKey(nameof(ProductCode))]
         public Product Product { get; set; } = null!;
 
         public ICollection<Production> Productions { get; set; } = new List<Production>();
