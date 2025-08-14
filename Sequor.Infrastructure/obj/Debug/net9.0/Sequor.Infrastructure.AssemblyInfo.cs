@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sequor.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c464d4d896ac9a82dbae0b865c45b13486d82240")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+414ec9b1042ed470dfb1d6de6385fbfea4c7fec4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sequor.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sequor.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -4,3 +4,17 @@ C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.A
 C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.AssemblyInfo.cs
 C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.csproj.CoreCompileInputs.cache
 C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.sourcelink.json
+C:\sequorTesteApi\Sequor.Infrastructure\bin\Debug\net9.0\Sequor.Infrastructure.deps.json
+C:\sequorTesteApi\Sequor.Infrastructure\bin\Debug\net9.0\Sequor.Infrastructure.runtimeconfig.json
+C:\sequorTesteApi\Sequor.Infrastructure\bin\Debug\net9.0\Sequor.Infrastructure.dll
+C:\sequorTesteApi\Sequor.Infrastructure\bin\Debug\net9.0\Sequor.Infrastructure.pdb
+C:\sequorTesteApi\Sequor.Infrastructure\bin\Debug\net9.0\Sequor.Application.dll
+C:\sequorTesteApi\Sequor.Infrastructure\bin\Debug\net9.0\Sequor.Domain.dll
+C:\sequorTesteApi\Sequor.Infrastructure\bin\Debug\net9.0\Sequor.Domain.pdb
+C:\sequorTesteApi\Sequor.Infrastructure\bin\Debug\net9.0\Sequor.Application.pdb
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.I.5B92031B.Up2Date
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.dll
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\refint\Sequor.Infrastructure.dll
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.pdb
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\Sequor.Infrastructure.genruntimeconfig.cache
+C:\sequorTesteApi\Sequor.Infrastructure\obj\Debug\net9.0\ref\Sequor.Infrastructure.dll
