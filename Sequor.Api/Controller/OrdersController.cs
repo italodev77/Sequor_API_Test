@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sequor.Application.DTOs;
-using Sequor.Application.IService;
+using Sequor.Application.Services.Interfaces;
+using System.Threading.Tasks;
 
 namespace Sequor.Api.Controller
 {
@@ -26,24 +27,23 @@ namespace Sequor.Api.Controller
         /// <summary>
         /// Retorna todas as ordens.
         /// </summary>
-        /// <returns>Lista de ordens</returns>
         [HttpGet("GetOrders")]
-        [ProducesResponseType(typeof(GetOrdersResponseDTO), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestObjectResult), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<GetOrdersResponseDTO>> GetOrders()
+        [ProducesResponseType(typeof(GetOrdersResponseDTO), 200)]
+        [ProducesResponseType(typeof(BadRequestObjectResult), 400)]
+        public async Task<IActionResult> GetOrders()
         {
             var result = await _getOrdersService.GetAllOrders();
+
+            
             return Ok(result);
         }
 
         /// <summary>
         /// Retorna produções filtradas por e-mail.
         /// </summary>
-        /// <param name="email">Email do usuário</param>
-        /// <returns>Lista de produções do usuário</returns>
         [HttpGet("GetProduction")]
-        [ProducesResponseType(typeof(GetProductionResponseDTO), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(BadRequestObjectResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(GetProductionResponseDTO), 200)]
+        [ProducesResponseType(typeof(BadRequestObjectResult), 400)]
         public async Task<IActionResult> GetProduction([FromQuery] string email)
         {
             if (string.IsNullOrWhiteSpace(email))
@@ -51,26 +51,29 @@ namespace Sequor.Api.Controller
 
             var result = await _getProductionByEmailService.Execute(email);
 
-            // Sempre retorna lista (mesmo vazia)
+           
             return Ok(result);
         }
 
         /// <summary>
         /// Registra uma produção seguindo as regras de negócio.
         /// </summary>
-        /// <param name="request">Dados do apontamento de produção</param>
-        /// <returns>Resultado do apontamento com status, tipo e descrição</returns>
         [HttpPost("SetProduction")]
-        [ProducesResponseType(typeof(SetProductionResponseDTO), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(SetProductionResponseDTO), StatusCodes.Status201Created)]
-        [ProducesResponseType(typeof(BadRequestObjectResult), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(SetProductionResponseDTO), 200)]
+        [ProducesResponseType(typeof(SetProductionResponseDTO), 201)]
+        [ProducesResponseType(typeof(BadRequestObjectResult), 400)]
         public async Task<IActionResult> SetProduction([FromBody] SetProductionRequestDTO request)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var response = await _setProductionService.SetProductionAsync(request);
-            return StatusCode(response.Status, response);
+            var result = await _setProductionService.SetProductionAsync(request);
+
+            if (result.Data == null)
+                return StatusCode(500, new { message = "Erro interno no apontamento de produção." });
+
+          
+            return StatusCode(result.Data.Status, result.Data);
         }
     }
 }

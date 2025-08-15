@@ -1,7 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+using Microsoft.EntityFrameworkCore;
 using Sequor.Application.IRepositories;
-using Sequor.Application.IService;
-using Sequor.Application.ServiceImp;
+using Sequor.Application.Services;
+using Sequor.Application.Services.Interfaces;
+using Sequor.Application.Utility;
+using Sequor.Domain.EntitiesValidator;
 using Sequor.Infrastructure.Data;
 using Sequor.Infrastructure.RepositoryImp;
 
@@ -13,6 +17,10 @@ builder.Services.AddDbContext<SequorDbContext>(options =>
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+builder.Services.AddValidatorsFromAssemblyContaining<UserValidator>();
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
+
 builder.Services.AddScoped<IGetOrdersService, GetOrdersServiceImp>();
 builder.Services.AddScoped<IGetProductionByEmailService, GetProductionByEmailService>();
 builder.Services.AddScoped<ISetProductionService, SetProductionServiceImp>();
@@ -20,6 +28,8 @@ builder.Services.AddScoped<ISetProductionService, SetProductionServiceImp>();
 builder.Services.AddScoped<IOrderRepository, OrderRepositoryImp>();
 builder.Services.AddScoped<IProductionRepository, ProductionRepositoryImp>();
 builder.Services.AddScoped<IUserRepository, UserRepositoryImp>();
+
+builder.Services.AddScoped<SetProductionValidation>();
 
 
 builder.Services.AddSwaggerGen();

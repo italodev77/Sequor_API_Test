@@ -148,3 +148,6 @@ C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\refint\Sequor.Api.dll
 C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\Sequor.Api.pdb
 C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\Sequor.Api.genruntimeconfig.cache
 C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\ref\Sequor.Api.dll
+C:\sequorTesteApi\Sequor.Api\bin\Debug\net9.0\FluentValidation.dll
+C:\sequorTesteApi\Sequor.Api\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
+C:\sequorTesteApi\Sequor.Api\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll

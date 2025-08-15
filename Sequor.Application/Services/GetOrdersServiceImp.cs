@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using Sequor.Application.DTOs;
 using Sequor.Application.IRepositories;
-using Sequor.Application.IService;
+using Sequor.Application.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sequor.Application.ServiceImp
+namespace Sequor.Application.Services
 {
     public class GetOrdersServiceImp: IGetOrdersService
     {

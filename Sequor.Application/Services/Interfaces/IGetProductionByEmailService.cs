@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sequor.Application.IService
+namespace Sequor.Application.Services.Interfaces
 {
     public interface IGetProductionByEmailService
     {

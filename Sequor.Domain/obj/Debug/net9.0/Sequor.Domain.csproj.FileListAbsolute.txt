@@ -10,3 +10,4 @@ C:\sequorTesteApi\Sequor.Domain\obj\Debug\net9.0\Sequor.Domain.dll
 C:\sequorTesteApi\Sequor.Domain\obj\Debug\net9.0\refint\Sequor.Domain.dll
 C:\sequorTesteApi\Sequor.Domain\obj\Debug\net9.0\Sequor.Domain.pdb
 C:\sequorTesteApi\Sequor.Domain\obj\Debug\net9.0\ref\Sequor.Domain.dll
+C:\sequorTesteApi\Sequor.Domain\obj\Debug\net9.0\Sequor.Domain.csproj.AssemblyReference.cache

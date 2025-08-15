@@ -11,11 +11,16 @@
       {
         "Type": "Sequor.Application.DTOs.GetOrdersResponseDTO",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.BadRequestObjectResult",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
       }
     ]
   },
@@ -35,13 +40,18 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Sequor.Application.DTOs.GetProductionResponseDTO, Sequor.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Sequor.Application.DTOs.GetProductionResponseDTO",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "application/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.BadRequestObjectResult",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
       }
     ]
   },
@@ -59,6 +69,28 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Sequor.Application.DTOs.SetProductionResponseDTO",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Sequor.Application.DTOs.SetProductionResponseDTO",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.BadRequestObjectResult",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
   }
 ]
