@@ -1,0 +1,6 @@
+wwwroot\images\civic.png
+wwwroot\images\compass.png
+wwwroot\images\corolla.png
+wwwroot\images\cronos.png
+wwwroot\images\onix.png
+wwwroot\images\polo.png

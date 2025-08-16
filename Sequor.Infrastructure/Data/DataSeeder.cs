@@ -13,7 +13,6 @@ namespace Sequor.Infrastructure.Data
 
             var baseUrl = config["ImageSettings:BaseUrl"];
 
-            
             var users = new[]
             {
                 new User
@@ -31,11 +30,11 @@ namespace Sequor.Infrastructure.Data
                     EndDate = new DateTime(2025, 12, 31)
                 }
             };
+
             foreach (var user in users)
                 if (!context.Users.Any(u => u.Email == user.Email))
                     context.Users.Add(user);
 
-            
             var products = new[]
             {
                 new Product { ProductCode = "CAR001", ProductDescription = "Toyota Corolla 2024", Image = baseUrl + "corolla.png", CycleTime = 18.5m },
@@ -45,11 +44,11 @@ namespace Sequor.Infrastructure.Data
                 new Product { ProductCode = "CAR005", ProductDescription = "Fiat Cronos 2025", Image = baseUrl + "cronos.png", CycleTime = 19.0m },
                 new Product { ProductCode = "CAR006", ProductDescription = "Jeep Compass 2025", Image = baseUrl + "compass.png", CycleTime = 22.5m }
             };
+
             foreach (var product in products)
                 if (!context.Products.Any(p => p.ProductCode == product.ProductCode))
                     context.Products.Add(product);
 
-            
             var materials = new[]
             {
                 new Material { MaterialCode = "PEC001", MaterialDescription = "Motor 2.0 Flex" },
@@ -59,11 +58,11 @@ namespace Sequor.Infrastructure.Data
                 new Material { MaterialCode = "PEC005", MaterialDescription = "Bancos de Couro" },
                 new Material { MaterialCode = "PEC006", MaterialDescription = "Sistema Multimídia 10\"" }
             };
+
             foreach (var material in materials)
                 if (!context.Materials.Any(m => m.MaterialCode == material.MaterialCode))
                     context.Materials.Add(material);
 
-            
             var productMaterials = new[]
             {
                 new ProductMaterial { ProductCode = "CAR001", MaterialCode = "PEC001" },
@@ -76,11 +75,11 @@ namespace Sequor.Infrastructure.Data
                 new ProductMaterial { ProductCode = "CAR005", MaterialCode = "PEC003" },
                 new ProductMaterial { ProductCode = "CAR006", MaterialCode = "PEC006" }
             };
+
             foreach (var pm in productMaterials)
                 if (!context.ProductMaterials.Any(x => x.ProductCode == pm.ProductCode && x.MaterialCode == pm.MaterialCode))
                     context.ProductMaterials.Add(pm);
 
-            
             var orders = new[]
             {
                 new Order { OrderId = "OP001", Quantity = 50, ProductCode = "CAR001" },
@@ -90,23 +89,32 @@ namespace Sequor.Infrastructure.Data
                 new Order { OrderId = "OP005", Quantity = 25, ProductCode = "CAR005" },
                 new Order { OrderId = "OP006", Quantity = 15, ProductCode = "CAR006" }
             };
+
             foreach (var order in orders)
                 if (!context.Orders.Any(o => o.OrderId == order.OrderId))
                     context.Orders.Add(order);
 
-            
-            var rand = new Random();
-            var productions = orders.SelectMany(o =>
-                Enumerable.Range(1, 5).Select(i => new Production
+            var productions = new[]
+            {
+                new Production
                 {
                     Email = "operador@fabrica.com",
-                    OrderId = o.OrderId,
-                    Date = DateTime.Now.AddDays(-i),
-                    Quantity = rand.Next(1, 10),
-                    MaterialCode = context.ProductMaterials.First(pm => pm.ProductCode == o.ProductCode).MaterialCode,
-                    CycleTime = products.First(p => p.ProductCode == o.ProductCode).CycleTime
-                })
-            ).ToList();
+                    OrderId = "OP001",
+                    Date = DateTime.Now.AddDays(-1),
+                    Quantity = 5,
+                    MaterialCode = "PEC001",
+                    CycleTime = 18.0m
+                },
+                new Production
+                {
+                    Email = "operador@fabrica.com",
+                    OrderId = "OP001",
+                    Date = DateTime.Now.AddDays(-2),
+                    Quantity = 7,
+                    MaterialCode = "PEC002",
+                    CycleTime = 17.8m
+                }
+            };
 
             foreach (var prod in productions)
             {

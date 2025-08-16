@@ -29,10 +29,10 @@ namespace Sequor.Domain.Entities
         public decimal Quantity { get; set; }
 
         [MaxLength(50)]
-        public string MaterialCode { get; set; } = null!;
+        public string MaterialCode { get; set; } = String.Empty;
 
         [ForeignKey(nameof(MaterialCode))]
-        public Material Material { get; set; } = null!;
+        public Material Material { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal CycleTime { get; set; }

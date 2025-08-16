@@ -7,6 +7,7 @@ public class MappingProfile : Profile
     public MappingProfile()
     {
         CreateMap<Material, MaterialDTO>();
+
         CreateMap<ProductMaterial, MaterialDTO>()
             .ForMember(dest => dest.MaterialCode, opt => opt.MapFrom(src => src.MaterialCode))
             .ForMember(dest => dest.MaterialDescription, opt => opt.MapFrom(src => src.Material.MaterialDescription));
@@ -21,9 +22,8 @@ public class MappingProfile : Profile
 
         CreateMap<Production, ProductionItemDTO>()
             .ForMember(dest => dest.Order, opt => opt.MapFrom(src => src.OrderId))
-            .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.Date));
+            .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.Date.ToString("dd/MM/yyyy")));
 
-        
         CreateMap<IEnumerable<Production>, GetProductionResponseDTO>()
             .ForMember(dest => dest.Productions, opt => opt.MapFrom(src => src));
     }
