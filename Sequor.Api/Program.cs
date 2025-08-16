@@ -35,14 +35,17 @@ builder.Services.AddScoped<SetProductionValidation>();
 builder.Services.AddSwaggerGen();
 
 
+
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
-//Aplicar migrações e seed de dados
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<SequorDbContext>();
+    var config = scope.ServiceProvider.GetRequiredService<IConfiguration>();
+
     try
     {
         Console.WriteLine("Aplicando migrações...");
@@ -50,7 +53,7 @@ using (var scope = app.Services.CreateScope())
         Console.WriteLine("Migrações aplicadas.");
 
         Console.WriteLine("Executando seed de dados...");
-        DataSeeder.Seed(dbContext);
+        DataSeeder.Seed(dbContext, config);
         Console.WriteLine("Seed concluído.");
     }
     catch (Exception ex)
@@ -62,10 +65,10 @@ using (var scope = app.Services.CreateScope())
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
+    app.UseSwagger();   
     app.UseSwaggerUI();
 }
-
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.MapControllers();
 

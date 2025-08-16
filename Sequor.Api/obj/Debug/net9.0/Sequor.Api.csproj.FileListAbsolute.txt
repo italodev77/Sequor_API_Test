@@ -141,7 +141,6 @@ C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\staticwebassets.build.json
 C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\staticwebassets.development.json
 C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\Sequor.Api.csproj.Up2Date
 C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\Sequor.Api.dll
 C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\refint\Sequor.Api.dll
@@ -151,3 +150,4 @@ C:\sequorTesteApi\Sequor.Api\obj\Debug\net9.0\ref\Sequor.Api.dll
 C:\sequorTesteApi\Sequor.Api\bin\Debug\net9.0\FluentValidation.dll
 C:\sequorTesteApi\Sequor.Api\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
 C:\sequorTesteApi\Sequor.Api\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\sequorTesteApi\Sequor.Api\bin\Debug\net9.0\Sequor.Api.staticwebassets.runtime.json

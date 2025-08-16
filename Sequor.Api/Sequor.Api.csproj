@@ -21,4 +21,9 @@
     <ProjectReference Include="..\Sequor.Infrastructure\Sequor.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\civic.png" />
+    <None Include="wwwroot\images\corolla.png" />
+  </ItemGroup>
+
 </Project>
