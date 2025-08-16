@@ -13,22 +13,15 @@ namespace Sequor.Domain.Entities
     {
         [Key]
         public long Id { get; set; }
-
-        [MaxLength(100)]
-        public string Email { get; set; } = null!;
-
-        [MaxLength(50)]
-        public string OrderId { get; set; } = null!;
+        public string Email { get; set; } = String.Empty;
+        public string OrderId { get; set; } = String.Empty;
 
         [ForeignKey(nameof(OrderId))]
-        public Order Order { get; set; } = null!;
-
+        public Order Order { get; set; }
         public DateTime Date { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal Quantity { get; set; }
-
-        [MaxLength(50)]
         public string MaterialCode { get; set; } = String.Empty;
 
         [ForeignKey(nameof(MaterialCode))]

@@ -12,13 +12,8 @@ namespace Sequor.Domain.Entities
     public class Product
     {
         [Key]
-        [MaxLength(50)]
-        public string ProductCode { get; set; } = null!;
-
-        [MaxLength(50)]
-        public string ProductDescription { get; set; } = null!;
-
-        [MaxLength(500)]
+        public string ProductCode { get; set; } = String.Empty;
+        public string ProductDescription { get; set; } = String.Empty;
         public string? Image { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]

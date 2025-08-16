@@ -12,17 +12,12 @@ namespace Sequor.Domain.Entities
     public class ProductMaterial
     {
         [Key, Column(Order = 0)]
-        [MaxLength(50)]
-        public string ProductCode { get; set; } = null!;
-
+        public string ProductCode { get; set; } = String.Empty;
         [ForeignKey(nameof(ProductCode))]
-        public Product Product { get; set; } = null!;
-
+        public Product Product { get; set; }
         [Key, Column(Order = 1)]
-        [MaxLength(50)]
-        public string MaterialCode { get; set; } = null!;
-
+        public string MaterialCode { get; set; } = String.Empty;
         [ForeignKey(nameof(MaterialCode))]
-        public Material Material { get; set; } = null!;
+        public Material Material { get; set; }
     }
 }

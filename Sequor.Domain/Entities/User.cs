@@ -12,12 +12,8 @@ namespace Sequor.Domain.Entities
     public class User
     {
         [Key]
-        [MaxLength(100)]
-        public string Email { get; set; } = null!;
-
-        [MaxLength(50)]
-        public string Name { get; set; } = null!;
-
+        public string Email { get; set; } = String.Empty;
+        public string Name { get; set; } = String.Empty;
         public DateTime InitialDate { get; set; }
         public DateTime EndDate { get; set; }
     }

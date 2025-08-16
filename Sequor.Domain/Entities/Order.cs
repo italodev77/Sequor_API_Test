@@ -12,17 +12,12 @@ namespace Sequor.Domain.Entities
     public class Order
     {
         [Key]
-        [MaxLength(50)]
-        public string OrderId { get; set; } = null!;
-
+        public string OrderId { get; set; } = String.Empty;
         [Column(TypeName = "decimal(18,2)")]
         public decimal Quantity { get; set; }
-
-        [MaxLength(50)]
         [ForeignKey(nameof(Product))]
-        public string ProductCode { get; set; } = null!;
-
-        public Product Product { get; set; } = null!;
+        public string ProductCode { get; set; } = String.Empty;
+        public Product Product { get; set; }
 
         public ICollection<Production> Productions { get; set; } = new List<Production>();
     }

@@ -12,11 +12,8 @@ namespace Sequor.Domain.Entities
     public class Material
     {
         [Key]
-        [MaxLength(50)]
-        public string MaterialCode { get; set; } = null!;
-
-        [MaxLength(500)]
-        public string MaterialDescription { get; set; } = null!;
+        public string MaterialCode { get; set; } = String.Empty;
+        public string MaterialDescription { get; set; } = String.Empty;
 
         public ICollection<ProductMaterial> ProductMaterials { get; set; } = new List<ProductMaterial>();
         public ICollection<Production> Productions { get; set; } = new List<Production>();
