@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequor.Application", "Sequo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequor.Infrastructure", "Sequor.Infrastructure\Sequor.Infrastructure.csproj", "{745E895C-64BC-40B0-8559-FE97D8D7A09D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequor.Tests", "Sequor.Tests\Sequor.Tests.csproj", "{CBC5580E-4791-4B36-99FE-4A92219C0DC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,8 +71,23 @@ Global
 		{745E895C-64BC-40B0-8559-FE97D8D7A09D}.Release|x64.Build.0 = Release|Any CPU
 		{745E895C-64BC-40B0-8559-FE97D8D7A09D}.Release|x86.ActiveCfg = Release|Any CPU
 		{745E895C-64BC-40B0-8559-FE97D8D7A09D}.Release|x86.Build.0 = Release|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Debug|x64.Build.0 = Debug|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Debug|x86.Build.0 = Debug|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Release|x64.ActiveCfg = Release|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Release|x64.Build.0 = Release|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Release|x86.ActiveCfg = Release|Any CPU
+		{CBC5580E-4791-4B36-99FE-4A92219C0DC6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {769234C0-BCC3-4348-8B3E-E9CA1D706489}
 	EndGlobalSection
 EndGlobal

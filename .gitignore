@@ -1,2 +1,9 @@
 # Ignorar pasta do Visual Studio
 .vs/
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+out/
+artifacts/
